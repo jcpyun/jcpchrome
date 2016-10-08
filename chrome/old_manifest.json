@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+
+  "name": "ebay Ninja",
+  "description": "This extension lists better deals listed on eBay",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "ebaywhite.png",
+    "default_popup": "popup.html"
+  },
+  "icons":{
+    "64" : "ebaywhite.png",
+    "32" : "ebaywhite.png",
+    "16" : "ebaywhite.png",
+    "128" : "ebaywhite.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+          "tabs",
+          "<all_urls>",
+          "contextMenus",
+          "background",
+          "notifications",
+          "pageCapture",
+          "topSites",
+          "http://www.google.com/*",
+          "http://*/*",
+          "https://*/*",
+          "activeTab"
+
+        ],
+   "chrome_url_overrides" : {
+    "newtab": "try.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["myscript.js"]
+    }
+  ]
+  
+}
