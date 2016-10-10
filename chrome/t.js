@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener(function(request, sender,sendResponse) {
   if (request.action == "getSource") {
     // message.innerText = request.source;
     if (request.source.search("amazon.com") == -1){
-        message.innerText="This extension only works on Amazon. #amazonKiller"
+        message.innerText=""
     }
     else{
     var a= request.source.search("<title>Amazon.com");

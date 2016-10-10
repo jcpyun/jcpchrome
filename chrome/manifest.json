@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "description": "Get pages source from a popup",
   "browser_action": {
-    "default_icon": "ebaywhite.png",
+    "default_icon": "jcp.png",
     "default_popup": "t.html"
   },
   "chrome_url_overrides" : {
@@ -21,14 +21,13 @@
   },
   "content_scripts":[
       {
-          "matches": ["http://svcs.ebay.com/services/search/FindingService/v1*","http://*/*", "https://*/*","http://jquery.com/*"],
+          "matches": ["http://*/*", "https://*/*","http://jquery.com/*"],
           // "css":["bs/css/bootstrap.min.css"],
-          "js": ["jquery-3.1.0.js","t.js","price.js","p5.min.js"]
+          "js": ["jquery-3.1.0.js","t.js"]
       }
   ],
  
   "permissions": ["tabs", "<all_urls>","http://www.google.com/*",
-          "http://svcs.ebay.com/*",
           "http://*/*",
           "https://*/*",
           "background",
