@@ -1,19 +1,20 @@
 {
-  "name": "Get pages source",
+  "name": "jcp environment",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "Get pages source from a popup",
+  "description": "better browsing capability",
   "browser_action": {
-    "default_icon": "jcp.png",
-    "default_popup": "t.html"
+    "default_icon": "jcp.png"
+    // "default_popup": "t.html"
   },
   "chrome_url_overrides" : {
     "newtab": "tab.html"
   },
   "background": {
-      "scripts":["jquery-3.1.0.js"]
+      "scripts":["background.js","jquery-3.1.0.js"],
+      "persistent":false //what is this
   },
-    "icons":{
+  "icons":{
     "64" : "jcp.png",
     "32" : "jcp.png",
     "16" : "jcp.png",
@@ -21,8 +22,9 @@
   },
   "content_scripts":[
       {
-          "matches": ["http://*/*", "https://*/*","http://jquery.com/*"],
+          "matches": ["http://*/*", "https://*/*","http://jquery.com/*","<all_urls>"],
           // "css":["bs/css/bootstrap.min.css"],
+          "css": ["jcpyun.css"],
           "js": ["jquery-3.1.0.js","t.js"]
       }
   ],
@@ -31,6 +33,6 @@
           "http://*/*",
           "https://*/*",
           "background",
-          "webRequest",
+
           "activeTab"]
 }
