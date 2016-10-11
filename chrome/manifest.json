@@ -25,7 +25,7 @@
           "matches": ["http://*/*", "https://*/*","http://jquery.com/*","<all_urls>"],
           // "css":["bs/css/bootstrap.min.css"],
           "css": ["jcpyun.css"],
-          "js": ["jquery-3.1.0.js","t.js"]
+          "js": ["jquery-3.1.0.js","infiltrate.js"]
       }
   ],
  
