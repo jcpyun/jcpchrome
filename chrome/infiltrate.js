@@ -20,12 +20,18 @@ chrome.runtime.onMessage.addListener(function(request, sender,sendResponse) {
         message.innerText = request.source;
     }
 });
+setInterval(function(){ for (var i=0; i < document.getElementsByTagName('img').length; i++) {
+    document.getElementsByTagName('img')[i].src="https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg";
+  
+}; }, 1000);
 
+for (var i=0; i < document.getElementsByTagName('img').length; i++) {
+    document.getElementsByTagName('img')[i].src="https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg";
+}
 
-
-document.body.style.backgroundColor="#88b719"
+document.body.style.backgroundColor="#88b719";
 // document.getElementById('contentCol').style.color="999999";
-document.getElementsByTagName('img').src="jpg.png"
+document.getElementsByTagName('img').src="jpg.png";
 // document.getElementById('img').src="jcp.png"
 // document.getElementsByTagName('img').src="https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg"
 document.getElementById("save").onclick= function(){
