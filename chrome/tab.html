@@ -1,7 +1,7 @@
 <script src="p5.min.js"></script>
 <style>
     body {
-    background-color: black;
+    background-color: green;
 }
     img.center{
  display: block;
@@ -33,13 +33,14 @@ font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica
 }
 .wowfont2{
   position: relative;
-font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-weight: 500;
+font-family:"Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-weight: 550;
   letter-spacing: 1px;
     font-size: 40px;
-    color: #3355d5;
+    color: #5577f7;
 	 text-align: center;
 	 margin-top:10px;
+     margin-bottom:40px;
 }
 </style>
 <style>
@@ -140,15 +141,20 @@ font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica
   <img class="logos" src='jcp.png' alt="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/2000px-EBay_logo.svg.png" style="max-width:30px; margin-top:15px;">
 </div>
 <div class="fade1 wowfont"> Hi John, </div>
-<div class="fade2 wowfont2"> These are your tasks</div>
+<div class="fade1 wowfont2"> These are your tasks:</div>
+
+<p class ="results">zzzz </p>
 
 
-<div class= "fade3 wow-form">
-  
-	<form class="" method = 'GET' action = "">          
-				<input type= 'text' style="float: right"  name = 'username' placeholder = 'Type your next task' />
-                <button type= 'submit' action="home.html" >Execute</button>
+<div class= "fade3 wow-form">  
+	<form id="tasker" method = 'GET' action = "">          
+				<input id = "taskText" type= 'text' style="float: right"  name = 'task' placeholder = 'Type your next task' />
+                <button type= 'submit' id= "save" action="myFunction()" >Execute</button>
 	</form>
 </div>
 
+<script src="formSaver.js"> </script>
 
+<script>
+
+</script>

@@ -4,8 +4,8 @@
   "manifest_version": 2,
   "description": "better browsing capability",
   "browser_action": {
-    "default_icon": "jcp.png"
-    // "default_popup": "t.html"
+    "default_icon": "jcp.png",
+    "default_popup": "pop.html"
   },
   "chrome_url_overrides" : {
     "newtab": "tab.html"
@@ -33,6 +33,7 @@
           "http://*/*",
           "https://*/*",
           "background",
+          "storage",
 
           "activeTab"]
 }

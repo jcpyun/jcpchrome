@@ -47,3 +47,4 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 // });
 
 // chrome.pageCapture.on
+chrome.pageCapture.on;
