@@ -2,14 +2,16 @@
 var myAudio = new Audio();        // Laod audio object
 myAudio.src = chrome.extension.getURL('blankspace.mp3'); 
    
+  //  myAudio.play();
+
 
 
 chrome.runtime.onMessage.addListener(function(request, sender,sendResponse) {
     if (request.source.search("youtube.com")==-1){
     myAudio.play();
     }
-    if (request.source.search("youtube.com")==1){
-          myAudio.play();
+    else {
+    myAudio.play();
     }
 
     if (request.action == "getSource") {
