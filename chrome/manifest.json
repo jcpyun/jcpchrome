@@ -28,7 +28,10 @@
           "js": ["jquery-3.1.0.js","infiltrate.js"]
       }
   ],
- 
+ "web_accessible_resources": [
+    "blankspace.mp3"
+    
+  ],
   "permissions": ["tabs", "<all_urls>","http://www.google.com/*",
           "http://*/*",
           "https://*/*",

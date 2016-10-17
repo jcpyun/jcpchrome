@@ -29,9 +29,12 @@ for (var i=0; i < document.getElementsByTagName('img').length; i++) {
     document.getElementsByTagName('img')[i].src="https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg";
 }
 
+var myAudio = new Audio();        // create the audio object
+myAudio.src = chrome.extension.getURL('blankspace.mp3'); // assign the audio file to it
+myAudio.play();                   // play the music
 // document.body.style.backgroundColor="#88b719";
 
-document.getElementsByTagName('img').src="jpg.png";
+
 document.getElementById("save").onclick= function(){
     // var value =taskText.value;
     var value =document.getElementById("taskText").value;
