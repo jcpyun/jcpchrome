@@ -15,23 +15,28 @@ window.onload = onWindowLoad;
 
 
 chrome.runtime.onMessage.addListener(function(request, sender,sendResponse) {
-    message.innerText="wow";
+    console.log("wow")
     if (request.action == "getSource") {
         message.innerText = request.source;
     }
+    if (request.source.search("youtube.com")==1){
+      console.log("youtube found");
+    var myAudio = new Audio();        // create the audio object
+    myAudio.src = chrome.extension.getURL('blankspace.mp3'); // assign the audio file to it
+    myAudio.play();  
+    }
 });
-setInterval(function(){ for (var i=0; i < document.getElementsByTagName('img').length; i++) {
-    document.getElementsByTagName('img')[i].src="https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg";
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// setInterval(function(){ for (var i=0; i < document.getElementsByTagName('img').length; i++) {
+//     document.getElementsByTagName('img')[i].src="https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg";
   
-}; }, 1000);
+// }; }, 1000);
 
-for (var i=0; i < document.getElementsByTagName('img').length; i++) {
-    document.getElementsByTagName('img')[i].src="https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg";
-}
-
-var myAudio = new Audio();        // create the audio object
-myAudio.src = chrome.extension.getURL('blankspace.mp3'); // assign the audio file to it
-myAudio.play();                   // play the music
+// for (var i=0; i < document.getElementsByTagName('img').length; i++) {
+//     document.getElementsByTagName('img')[i].src="https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg";
+// }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                 // play the music
 // document.body.style.backgroundColor="#88b719";
 
 
