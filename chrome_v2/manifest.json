@@ -22,7 +22,7 @@
   },
   "content_scripts":[
       {
-          "matches": ["http://*/*", "https://*/*","http://jquery.com/*","<all_urls>"],
+          "matches": ["http://*/*", "https://*/*","https://code.responsivevoice.org/*", "http://jquery.com/*","<all_urls>"],
           "css": [],
           "js": ["jquery-3.1.0.js","infiltrate.js","responsivevoice.js","voice.js"]
       }
@@ -31,12 +31,14 @@
     "blankspace.mp3"
     
   ],
-"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+// "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+"content_security_policy":"script-src 'self' 'unsafe-eval'; object-src 'self'",
+
   "permissions": ["tabs", "<all_urls>","http://www.google.com/*",
           "http://*/*",
           "https://*/*",
           "background",
           "storage",
-
+          "https://code.responsivevoice.org/*" ,
           "activeTab"]
 }

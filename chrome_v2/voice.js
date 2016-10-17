@@ -1,1 +1,1 @@
-responsiveVoice.speak("hello world");
+responsiveVoice.speak("hello world", "UK English Male");
