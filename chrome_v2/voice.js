@@ -1,0 +1,1 @@
+responsiveVoice.speak("hello world");

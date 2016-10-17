@@ -11,7 +11,7 @@
     "newtab": "tab.html"
   },
   "background": {
-      "scripts":["background.js","jquery-3.1.0.js"],
+      "scripts":["background.js","jquery-3.1.0.js","responsivevoice.js","voice.js"],
       "persistent":false //what is this
   },
   "icons":{
@@ -24,13 +24,14 @@
       {
           "matches": ["http://*/*", "https://*/*","http://jquery.com/*","<all_urls>"],
           "css": [],
-          "js": ["jquery-3.1.0.js","infiltrate.js"]
+          "js": ["jquery-3.1.0.js","infiltrate.js","responsivevoice.js","voice.js"]
       }
   ],
  "web_accessible_resources": [
     "blankspace.mp3"
     
   ],
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "permissions": ["tabs", "<all_urls>","http://www.google.com/*",
           "http://*/*",
           "https://*/*",
