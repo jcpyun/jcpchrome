@@ -4,24 +4,20 @@ myAudio.src = chrome.extension.getURL('blankspace.mp3');
    
   //  myAudio.play();
 
+//////////////
+// chrome.tabs.getCurrent(function(tab){
+//     alert(tab.url);
+// });
+// OR if you're in a content script,
 
+// alert(document.location.href);
+//////////
+// alert(document.location.href); //this contains url
 
-chrome.runtime.onMessage.addListener(function(request, sender,sendResponse) {
-    if (request.source.search("youtube.com")==-1){
-    myAudio.play();
-    }
-    else {
-    myAudio.play();
-    }
+if (document.location.href.includes("google")){
+  myAudio.play();
+}
 
-    if (request.action == "getSource") {
-        message.innerText = request.source;
-    }
-    if (request.source.search("youtube.com")==1){
-      alert("none");
-     
-    }
-});
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // setInterval(function(){ for (var i=0; i < document.getElementsByTagName('img').length; i++) {
