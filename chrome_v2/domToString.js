@@ -1,4 +1,4 @@
-
+// execution of DomToString. This might not be necessary.
 function DOMtoString(document_root) {
     var html = '',
         node = document_root.firstChild;
